@@ -902,22 +902,27 @@
             "ioValues": [
                 {
                     "name": "Number",
-                    "ioValue": 4,
-                    "currentEquation": null
+                    "ioValue": 2,
+                    "currentEquation": "2"
                 },
                 {
                     "name": "distX",
-                    "ioValue": 10,
-                    "currentEquation": null
+                    "ioValue": 610,
+                    "currentEquation": "daim * 3 + 10"
                 },
                 {
                     "name": "distY",
-                    "ioValue": 10,
-                    "currentEquation": null
+                    "ioValue": 0,
+                    "currentEquation": "0"
                 },
                 {
                     "name": "distZ",
-                    "ioValue": 10,
+                    "ioValue": 0,
+                    "currentEquation": "0"
+                },
+                {
+                    "name": "daim",
+                    "ioValue": 1,
                     "currentEquation": null
                 }
             ],
@@ -977,22 +982,22 @@
                     "ioValues": [
                         {
                             "name": "Number",
-                            "ioValue": 4,
+                            "ioValue": 2,
                             "currentEquation": null
                         },
                         {
                             "name": "distX",
-                            "ioValue": 10,
+                            "ioValue": 610,
                             "currentEquation": null
                         },
                         {
                             "name": "distY",
-                            "ioValue": 10,
+                            "ioValue": 0,
                             "currentEquation": null
                         },
                         {
                             "name": "distZ",
-                            "ioValue": 10,
+                            "ioValue": 0,
                             "currentEquation": null
                         }
                     ],
@@ -1165,6 +1170,57 @@
             "unitsKey": "MM",
             "fileTypeVersion": 1,
             "compiledBom": []
+        },
+        {
+            "atomType": "Equation",
+            "name": "Equation",
+            "x": 0.7584635416666666,
+            "y": 0.6755952380952381,
+            "uniqueID": "fa845d85-8919-4061-8c50-1c1c3224990b",
+            "ioValues": [
+                {
+                    "name": "diam",
+                    "ioValue": 200,
+                    "currentEquation": null
+                }
+            ],
+            "currentEquation": "diam * 3  + 10"
+        },
+        {
+            "atomType": "Gcode",
+            "name": "Gcode",
+            "x": 0.9055989583333334,
+            "y": 0.39583333333333337,
+            "uniqueID": "a1bf3f3a-3b9d-40a9-b0ee-47ae08bc7bd6",
+            "ioValues": [
+                {
+                    "name": "Tool Size",
+                    "ioValue": 6.35,
+                    "currentEquation": null
+                },
+                {
+                    "name": "Passes",
+                    "ioValue": 1,
+                    "currentEquation": null
+                },
+                {
+                    "name": "Speed",
+                    "ioValue": 1500,
+                    "currentEquation": null
+                },
+                {
+                    "name": "Cut Through",
+                    "ioValue": 0,
+                    "currentEquation": null
+                },
+                {
+                    "name": "Part Name",
+                    "ioValue": "Lamp One",
+                    "currentEquation": null
+                }
+            ],
+            "partName": "Lamp One",
+            "sortDirection": "Left"
         }
     ],
     "allConnectors": [
@@ -1185,6 +1241,12 @@
             "ap2Name": "d",
             "ap1ID": "f1590d52-aa05-4cf7-9e9f-be3ce3027105",
             "ap2ID": "a5cf62d7-a42e-4964-ae4d-f0d18a5483a0"
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "diam",
+            "ap1ID": "f1590d52-aa05-4cf7-9e9f-be3ce3027105",
+            "ap2ID": "fa845d85-8919-4061-8c50-1c1c3224990b"
         },
         {
             "ap1Name": "number",
@@ -1314,6 +1376,12 @@
         },
         {
             "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap1ID": "0d0cc73f-1282-46b3-be46-0a4593122add",
+            "ap2ID": "62ff65ad-7b00-4338-828f-e7c5abcbfd2a"
+        },
+        {
+            "ap1Name": "geometry",
             "ap2Name": "geometry",
             "ap1ID": "04552891-7906-4f11-9a56-4587e2b85c57",
             "ap2ID": "5ff5f179-4bf4-445a-afa1-c7c5bceaec45"
@@ -1347,10 +1415,22 @@
             "ap2Name": "Shape 2",
             "ap1ID": "800d136a-1b2f-4489-925c-198eef6a83e4",
             "ap2ID": "15f2805e-f422-4062-afaf-0d42d555c8b3"
+        },
+        {
+            "ap1Name": "geometry or number",
+            "ap2Name": "geometry",
+            "ap1ID": "675d24c5-962e-4c00-8e47-daa136b47e64",
+            "ap2ID": "a1bf3f3a-3b9d-40a9-b0ee-47ae08bc7bd6"
+        },
+        {
+            "ap1Name": "result",
+            "ap2Name": "distX",
+            "ap1ID": "fa845d85-8919-4061-8c50-1c1c3224990b",
+            "ap2ID": "675d24c5-962e-4c00-8e47-daa136b47e64"
         }
     ],
     "unitsKey": "MM",
     "fileTypeVersion": 1,
-    "compiledBom": {},
+    "compiledBom": [],
     "filetypeVersion": 1
 }
