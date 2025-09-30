@@ -7,8 +7,8 @@
     "ioValues": [
         {
             "name": "diam",
-            "ioValue": 700,
-            "currentEquation": "700"
+            "ioValue": 200,
+            "currentEquation": "200"
         }
     ],
     "topLevel": true,
@@ -62,7 +62,7 @@
                 },
                 {
                     "name": "diameter",
-                    "ioValue": 700,
+                    "ioValue": 200,
                     "currentEquation": "100"
                 }
             ],
@@ -103,7 +103,7 @@
                     "ioValues": [
                         {
                             "name": "diameter",
-                            "ioValue": 700,
+                            "ioValue": 200,
                             "currentEquation": null
                         }
                     ]
@@ -117,7 +117,7 @@
                     "ioValues": [
                         {
                             "name": "diameter",
-                            "ioValue": 690,
+                            "ioValue": 190,
                             "currentEquation": "10"
                         }
                     ]
@@ -131,7 +131,7 @@
                     "ioValues": [
                         {
                             "name": "d",
-                            "ioValue": 700,
+                            "ioValue": 200,
                             "currentEquation": null
                         },
                         {
@@ -212,7 +212,7 @@
                 },
                 {
                     "name": "diameter",
-                    "ioValue": 989.9494936611666,
+                    "ioValue": 10,
                     "currentEquation": null
                 }
             ],
@@ -253,7 +253,7 @@
                     "ioValues": [
                         {
                             "name": "diameter",
-                            "ioValue": 989.9494936611666,
+                            "ioValue": 10,
                             "currentEquation": null
                         }
                     ]
@@ -267,7 +267,7 @@
                     "ioValues": [
                         {
                             "name": "diameter",
-                            "ioValue": 979.9494936611666,
+                            "ioValue": 0,
                             "currentEquation": null
                         }
                     ]
@@ -281,7 +281,7 @@
                     "ioValues": [
                         {
                             "name": "d",
-                            "ioValue": 989.9494936611666,
+                            "ioValue": 10,
                             "currentEquation": null
                         },
                         {
@@ -349,21 +349,6 @@
             "compiledBom": []
         },
         {
-            "atomType": "Equation",
-            "name": "Equation",
-            "x": 0.15299479166666669,
-            "y": 0.8988095238095238,
-            "uniqueID": "48fe931f-b8d6-4458-8a13-fff927b45e5d",
-            "ioValues": [
-                {
-                    "name": "x",
-                    "ioValue": 700,
-                    "currentEquation": "1"
-                }
-            ],
-            "currentEquation": "x  / 3"
-        },
-        {
             "atomType": "Molecule",
             "name": "ring",
             "x": 0.28515625,
@@ -377,8 +362,8 @@
                 },
                 {
                     "name": "diameter",
-                    "ioValue": 233.33333333333334,
-                    "currentEquation": null
+                    "ioValue": 600,
+                    "currentEquation": "diam * 3"
                 }
             ],
             "topLevel": false,
@@ -418,7 +403,7 @@
                     "ioValues": [
                         {
                             "name": "diameter",
-                            "ioValue": 233.33333333333334,
+                            "ioValue": 600,
                             "currentEquation": null
                         }
                     ]
@@ -432,7 +417,7 @@
                     "ioValues": [
                         {
                             "name": "diameter",
-                            "ioValue": 223.33333333333334,
+                            "ioValue": 590,
                             "currentEquation": null
                         }
                     ]
@@ -446,7 +431,7 @@
                     "ioValues": [
                         {
                             "name": "d",
-                            "ioValue": 233.33333333333334,
+                            "ioValue": 600,
                             "currentEquation": null
                         },
                         {
@@ -516,17 +501,17 @@
         {
             "atomType": "Equation",
             "name": "Equation",
-            "x": 0.14583333333333334,
-            "y": 0.6607142857142857,
+            "x": 0.115234375,
+            "y": 0.8601190476190476,
             "uniqueID": "876949c1-19f5-4ec4-85e4-723611af38e2",
             "ioValues": [
                 {
                     "name": "x",
-                    "ioValue": 700,
+                    "ioValue": 200,
                     "currentEquation": null
                 }
             ],
-            "currentEquation": "x * sqrt(2)"
+            "currentEquation": "x * (1/sqrt(2))"
         }
     ],
     "allConnectors": [
@@ -535,12 +520,6 @@
             "ap2Name": "diameter",
             "ap1ID": "f1590d52-aa05-4cf7-9e9f-be3ce3027105",
             "ap2ID": "a5987c4a-3f24-432c-87fd-efef9cc75a1e"
-        },
-        {
-            "ap1Name": "number or geometry",
-            "ap2Name": "x",
-            "ap1ID": "f1590d52-aa05-4cf7-9e9f-be3ce3027105",
-            "ap2ID": "48fe931f-b8d6-4458-8a13-fff927b45e5d"
         },
         {
             "ap1Name": "number or geometry",
@@ -564,18 +543,6 @@
             "ap1Name": "number",
             "ap2Name": "offset",
             "ap1ID": "b0f094a0-ebb6-491b-ac98-9d771986e25e",
-            "ap2ID": "5cb5f35c-1960-450e-9953-b372bc5bd093"
-        },
-        {
-            "ap1Name": "result",
-            "ap2Name": "diameter",
-            "ap1ID": "48fe931f-b8d6-4458-8a13-fff927b45e5d",
-            "ap2ID": "daa0e1e6-2924-4fcb-bb12-a57ce7e78767"
-        },
-        {
-            "ap1Name": "result",
-            "ap2Name": "diameter",
-            "ap1ID": "876949c1-19f5-4ec4-85e4-723611af38e2",
             "ap2ID": "5cb5f35c-1960-450e-9953-b372bc5bd093"
         }
     ],
