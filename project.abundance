@@ -42,8 +42,8 @@
         {
             "atomType": "Constant",
             "name": "material_thickness",
-            "x": 0.41015624999999994,
-            "y": 0.19047619047619047,
+            "x": 0.4205729166666667,
+            "y": 0.15773809523809523,
             "uniqueID": "ec9a644b-2b5b-4eb1-80e8-96ae2f9df193",
             "ioValues": [],
             "value": 10
@@ -212,7 +212,7 @@
                 },
                 {
                     "name": "diameter",
-                    "ioValue": 10,
+                    "ioValue": 317.15728752538104,
                     "currentEquation": null
                 }
             ],
@@ -253,7 +253,7 @@
                     "ioValues": [
                         {
                             "name": "diameter",
-                            "ioValue": 10,
+                            "ioValue": 317.15728752538104,
                             "currentEquation": null
                         }
                     ]
@@ -267,7 +267,7 @@
                     "ioValues": [
                         {
                             "name": "diameter",
-                            "ioValue": 0,
+                            "ioValue": 307.15728752538104,
                             "currentEquation": null
                         }
                     ]
@@ -281,7 +281,7 @@
                     "ioValues": [
                         {
                             "name": "d",
-                            "ioValue": 10,
+                            "ioValue": 317.15728752538104,
                             "currentEquation": null
                         },
                         {
@@ -501,8 +501,8 @@
         {
             "atomType": "Equation",
             "name": "Equation",
-            "x": 0.115234375,
-            "y": 0.8601190476190476,
+            "x": 0.10026041666666667,
+            "y": 0.8839285714285715,
             "uniqueID": "876949c1-19f5-4ec4-85e4-723611af38e2",
             "ioValues": [
                 {
@@ -512,6 +512,26 @@
                 }
             ],
             "currentEquation": "x * (1/sqrt(2))"
+        },
+        {
+            "atomType": "Equation",
+            "name": "Equation",
+            "x": 0.13671875,
+            "y": 0.6904761904761905,
+            "uniqueID": "a5cf62d7-a42e-4964-ae4d-f0d18a5483a0",
+            "ioValues": [
+                {
+                    "name": "y",
+                    "ioValue": 141.42135623730948,
+                    "currentEquation": null
+                },
+                {
+                    "name": "d",
+                    "ioValue": 200,
+                    "currentEquation": null
+                }
+            ],
+            "currentEquation": "3 * d - 2 * y"
         }
     ],
     "allConnectors": [
@@ -526,6 +546,12 @@
             "ap2Name": "x",
             "ap1ID": "f1590d52-aa05-4cf7-9e9f-be3ce3027105",
             "ap2ID": "876949c1-19f5-4ec4-85e4-723611af38e2"
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "d",
+            "ap1ID": "f1590d52-aa05-4cf7-9e9f-be3ce3027105",
+            "ap2ID": "a5cf62d7-a42e-4964-ae4d-f0d18a5483a0"
         },
         {
             "ap1Name": "number",
@@ -543,6 +569,18 @@
             "ap1Name": "number",
             "ap2Name": "offset",
             "ap1ID": "b0f094a0-ebb6-491b-ac98-9d771986e25e",
+            "ap2ID": "5cb5f35c-1960-450e-9953-b372bc5bd093"
+        },
+        {
+            "ap1Name": "result",
+            "ap2Name": "y",
+            "ap1ID": "876949c1-19f5-4ec4-85e4-723611af38e2",
+            "ap2ID": "a5cf62d7-a42e-4964-ae4d-f0d18a5483a0"
+        },
+        {
+            "ap1Name": "result",
+            "ap2Name": "diameter",
+            "ap1ID": "a5cf62d7-a42e-4964-ae4d-f0d18a5483a0",
             "ap2ID": "5cb5f35c-1960-450e-9953-b372bc5bd093"
         }
     ],
