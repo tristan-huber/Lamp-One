@@ -4,9 +4,65 @@
     "x": 0,
     "y": 0,
     "uniqueID": "4c9bb809-4724-4d16-82df-53f1afed2a5e",
-    "ioValues": [],
+    "ioValues": [
+        {
+            "name": "diam",
+            "ioValue": 700,
+            "currentEquation": "700"
+        }
+    ],
     "topLevel": true,
-    "allAtoms": [],
+    "allAtoms": [
+        {
+            "atomType": "Output",
+            "name": "Output",
+            "x": 0.98,
+            "y": 0.5,
+            "uniqueID": "62ff65ad-7b00-4338-828f-e7c5abcbfd2a",
+            "ioValues": []
+        },
+        {
+            "atomType": "Input",
+            "name": "diam",
+            "x": 0.024749999999999998,
+            "y": 0.6101190476190477,
+            "uniqueID": "f1590d52-aa05-4cf7-9e9f-be3ce3027105",
+            "ioValues": [],
+            "type": "number"
+        },
+        {
+            "atomType": "Circle",
+            "name": "Circle",
+            "x": 0.20117187500000003,
+            "y": 0.7321428571428571,
+            "uniqueID": "ace36513-9a67-4995-b34d-f16f9ca16479",
+            "ioValues": [
+                {
+                    "name": "diameter",
+                    "ioValue": 10,
+                    "currentEquation": null
+                }
+            ]
+        },
+        {
+            "atomType": "Constant",
+            "name": "rim_width",
+            "x": 0.07747395833333333,
+            "y": 0.24404761904761904,
+            "uniqueID": "b0f094a0-ebb6-491b-ac98-9d771986e25e",
+            "ioValues": [],
+            "value": 10
+        },
+        {
+            "atomType": "Constant",
+            "name": "material_thickness",
+            "x": 0.07486979166666667,
+            "y": 0.4166666666666667,
+            "uniqueID": "ec9a644b-2b5b-4eb1-80e8-96ae2f9df193",
+            "ioValues": [],
+            "value": 10
+        }
+    ],
     "allConnectors": [],
     "unitsKey": "MM",
     "fileTypeVersion": 1,
