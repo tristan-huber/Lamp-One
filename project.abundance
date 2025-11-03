@@ -12291,6 +12291,37 @@
       "unitsKey": "Inches",
       "fileTypeVersion": 1,
       "compiledBom": []
+    },
+    {
+      "atomType": "Gcode",
+      "name": "Gcode",
+      "x": 0.853515625,
+      "y": 0.8363095238095238,
+      "uniqueID": "id-3256",
+      "ioValues": [
+        {
+          "name": "Tool Size",
+          "ioValue": 0.25
+        },
+        {
+          "name": "Passes",
+          "ioValue": 1
+        },
+        {
+          "name": "Speed",
+          "ioValue": 1500
+        },
+        {
+          "name": "Cut Through",
+          "ioValue": 0
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "Lamp One"
+        }
+      ],
+      "partName": "Lamp One",
+      "sortDirection": "Left"
     }
   ],
   "allConnectors": [
@@ -12395,6 +12426,12 @@
       "ap2Name": "geometry",
       "ap1ID": "01b4c584-16c7-4e77-9298-ef6b6d88c11e",
       "ap2ID": "8571f1ca-486f-4b0f-bac6-b9dcbad9c6bc"
+    },
+    {
+      "ap1Name": "geometry",
+      "ap2Name": "geometry",
+      "ap1ID": "8571f1ca-486f-4b0f-bac6-b9dcbad9c6bc",
+      "ap2ID": "id-3256"
     },
     {
       "ap1Name": "geometry or number",
