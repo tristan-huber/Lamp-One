@@ -87,8 +87,8 @@
     {
       "atomType": "Move",
       "name": "Move",
-      "x": 0.5169270833333334,
-      "y": 0.3,
+      "x": 0.4205729166666667,
+      "y": 0.375,
       "uniqueID": "5e67d293-18e3-45c4-bd26-8d4816cc37c6",
       "ioValues": [
         {
@@ -108,8 +108,8 @@
     {
       "atomType": "Move",
       "name": "Move",
-      "x": 0.5533854166666666,
-      "y": 0.5971428571428571,
+      "x": 0.40625,
+      "y": 0.6517857142857143,
       "uniqueID": "db4a5fbd-dc98-4db8-97a6-62c986ff290d",
       "ioValues": [
         {
@@ -2446,8 +2446,8 @@
     {
       "atomType": "GitHubMolecule",
       "name": "CylinderShade",
-      "x": 0.40755208333333337,
-      "y": 0.1742857142857143,
+      "x": 0.3268229166666667,
+      "y": 0.17261904761904762,
       "uniqueID": "id-1979",
       "ioValues": [
         {
@@ -5729,8 +5729,8 @@
     {
       "atomType": "GitHubMolecule",
       "name": "CylinderShade",
-      "x": 0.39192708333333337,
-      "y": 0.4971428571428571,
+      "x": 0.33203125,
+      "y": 0.49702380952380953,
       "uniqueID": "id-2249",
       "ioValues": [
         {
@@ -9012,8 +9012,8 @@
     {
       "atomType": "GitHubMolecule",
       "name": "CylinderShade",
-      "x": 0.3938802083333333,
-      "y": 0.8828571428571428,
+      "x": 0.32421875,
+      "y": 0.863095238095238,
       "uniqueID": "id-2519",
       "ioValues": [
         {
@@ -12322,6 +12322,214 @@
       ],
       "partName": "Lamp One",
       "sortDirection": "Left"
+    },
+    {
+      "atomType": "GitHubMolecule",
+      "name": "IthFromAssembly",
+      "x": 0.5377604166666666,
+      "y": 0.8363095238095238,
+      "uniqueID": "id-3269",
+      "ioValues": [
+        {
+          "name": "i",
+          "ioValue": 10
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "name": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-3265",
+          "ioValues": []
+        },
+        {
+          "atomType": "Code",
+          "name": "Code",
+          "x": 0.5026041666666666,
+          "y": 0.6845238095238095,
+          "uniqueID": "id-3266",
+          "ioValues": [
+            {
+              "name": "i",
+              "ioValue": 10
+            }
+          ],
+          "codeVersion": 1,
+          "code": "\n      const Inputs = [\n       {inputName: \"geometry\", type: \"geometry\", defaultValue: null},\n      {inputName: \"i\", type: \"number\", defaultValue: 0},\n      ]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n\n      //Gets the shape from the library - no need to clone or access geometry directly\n      let importedShape = library[geometry]\n      let j = 0;\n      console.log(\"foo\")\n      console.log(importedShape)\n      const leafList = await AssemblyAsIterable(importedShape)\n      console.log(leafList)\n      if (i >= leafList.length) {\n        throw new Error(`Assembly only has ${leafList.length} entries. Tried to find index: ${i}.`)\n      }\n      return leafList[i]\n\n\n      /**\n      Built-in Functions Available:\n      - Move(geometry, x, y, z) - Move a shape in 3D space\n      - Rotate(geometry, x, y, z) - Rotate a shape around X, Y, Z axes (degrees)\n      - Scale(geometry, factor) - Scale a shape by a factor\n      - Assembly([shapes]) - Combine multiple shapes into an assembly\n      - Intersect(shape1, shape2) - Boolean intersection of two shapes\n      - GetBounds(geometry) - Get the bounding box of a shape\n      - Fillet(geometry, radius) - Round edges with specified radius\n      - Chamfer(geometry, size) - Bevel edges with specified size\n\n      To Use the Code Atom, enter your inputs to the input list as an object array:\n      const Inputs = [\n        {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n        {inputName: \"dist\", type: \"number\", defaultValue: 5},\n        {inputName: \"height\", type: \"number\", defaultValue: 10}\n      ]\n\n      Access imported geometry using library[inputName] - the built-in functions handle \n      the complexity of accessing geometry arrays and maintaining metadata automatically.\n\n      Simple Example - Move a shape:\n         const Inputs = [\n          {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n          {inputName: \"x\", type: \"number\", defaultValue: 5}\n        ]\n        let movedShape = await Move(library[shape], x, 0, 0)\n        return movedShape\n      */\n      "
+        },
+        {
+          "atomType": "Input",
+          "name": "geometry",
+          "x": 0.025384615384615384,
+          "y": 0.15384615384615385,
+          "uniqueID": "id-3267",
+          "ioValues": [],
+          "type": "geometry"
+        },
+        {
+          "atomType": "Input",
+          "name": "i",
+          "x": 0.025384615384615384,
+          "y": 0.23076923076923078,
+          "uniqueID": "id-3268",
+          "ioValues": [],
+          "type": "number"
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap1Name": "output",
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-3266",
+          "ap2ID": "id-3265"
+        },
+        {
+          "ap1Name": "number or geometry",
+          "ap2Name": "geometry",
+          "ap1ID": "id-3267",
+          "ap2ID": "id-3266"
+        },
+        {
+          "ap1Name": "number or geometry",
+          "ap2Name": "i",
+          "ap1ID": "id-3268",
+          "ap2ID": "id-3266"
+        }
+      ],
+      "parentRepo": {
+        "lastFoundGit": "2025-11-05T15:47:14.797Z",
+        "privateRepo": false,
+        "repoName": "IthFromAssembly",
+        "dateCreated": "2025-11-03T02:49:44Z",
+        "readMe": "https://raw.githubusercontent.com/tristan-huber/IthFromAssembly/master/README.md?sanitize=true",
+        "yyyy": 2025,
+        "topMoleculeID": "id-2718",
+        "githubMoleculesUsed": [],
+        "html_url": "https://github.com/tristan-huber/IthFromAssembly",
+        "topics": [
+          "abundance-tool"
+        ],
+        "parentRepo": null,
+        "forks": 0,
+        "dateModified": "739558",
+        "ranking": 0,
+        "searchField": "ithfromassembly tristan-huber get the ith leaf from an assembly abundance-tool",
+        "owner": "tristan-huber",
+        "description": "Get the ith leaf from an assembly",
+        "contentURL": "https://raw.githubusercontent.com/tristan-huber/IthFromAssembly/master/project.abundance?sanitize=true",
+        "svgURL": "https://raw.githubusercontent.com/tristan-huber/IthFromAssembly/master/project.svg?sanitize=true",
+        "isLocal": false
+      },
+      "unitsKey": "Unitless",
+      "fileTypeVersion": 1,
+      "compiledBom": []
+    },
+    {
+      "atomType": "GitHubMolecule",
+      "name": "IthFromAssembly",
+      "x": 0.556640625,
+      "y": 0.636904761904762,
+      "uniqueID": "id-3281",
+      "ioValues": [
+        {
+          "name": "i",
+          "ioValue": 10
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "name": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-3282",
+          "ioValues": []
+        },
+        {
+          "atomType": "Code",
+          "name": "Code",
+          "x": 0.5026041666666666,
+          "y": 0.6845238095238095,
+          "uniqueID": "id-3283",
+          "ioValues": [
+            {
+              "name": "i",
+              "ioValue": 10
+            }
+          ],
+          "codeVersion": 1,
+          "code": "\n      const Inputs = [\n       {inputName: \"geometry\", type: \"geometry\", defaultValue: null},\n      {inputName: \"i\", type: \"number\", defaultValue: 0},\n      ]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n\n      //Gets the shape from the library - no need to clone or access geometry directly\n      let importedShape = library[geometry]\n      let j = 0;\n      console.log(\"foo\")\n      console.log(importedShape)\n      const leafList = await AssemblyAsIterable(importedShape)\n      console.log(leafList)\n      if (i >= leafList.length) {\n        throw new Error(`Assembly only has ${leafList.length} entries. Tried to find index: ${i}.`)\n      }\n      return leafList[i]\n\n\n      /**\n      Built-in Functions Available:\n      - Move(geometry, x, y, z) - Move a shape in 3D space\n      - Rotate(geometry, x, y, z) - Rotate a shape around X, Y, Z axes (degrees)\n      - Scale(geometry, factor) - Scale a shape by a factor\n      - Assembly([shapes]) - Combine multiple shapes into an assembly\n      - Intersect(shape1, shape2) - Boolean intersection of two shapes\n      - GetBounds(geometry) - Get the bounding box of a shape\n      - Fillet(geometry, radius) - Round edges with specified radius\n      - Chamfer(geometry, size) - Bevel edges with specified size\n\n      To Use the Code Atom, enter your inputs to the input list as an object array:\n      const Inputs = [\n        {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n        {inputName: \"dist\", type: \"number\", defaultValue: 5},\n        {inputName: \"height\", type: \"number\", defaultValue: 10}\n      ]\n\n      Access imported geometry using library[inputName] - the built-in functions handle \n      the complexity of accessing geometry arrays and maintaining metadata automatically.\n\n      Simple Example - Move a shape:\n         const Inputs = [\n          {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n          {inputName: \"x\", type: \"number\", defaultValue: 5}\n        ]\n        let movedShape = await Move(library[shape], x, 0, 0)\n        return movedShape\n      */\n      "
+        },
+        {
+          "atomType": "Input",
+          "name": "geometry",
+          "x": 0.025384615384615384,
+          "y": 0.15384615384615385,
+          "uniqueID": "id-3284",
+          "ioValues": [],
+          "type": "geometry"
+        },
+        {
+          "atomType": "Input",
+          "name": "i",
+          "x": 0.025384615384615384,
+          "y": 0.23076923076923078,
+          "uniqueID": "id-3285",
+          "ioValues": [],
+          "type": "number"
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap1Name": "output",
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-3283",
+          "ap2ID": "id-3282"
+        },
+        {
+          "ap1Name": "number or geometry",
+          "ap2Name": "geometry",
+          "ap1ID": "id-3284",
+          "ap2ID": "id-3283"
+        },
+        {
+          "ap1Name": "number or geometry",
+          "ap2Name": "i",
+          "ap1ID": "id-3285",
+          "ap2ID": "id-3283"
+        }
+      ],
+      "parentRepo": {
+        "lastFoundGit": "2025-11-05T15:47:14.797Z",
+        "privateRepo": false,
+        "repoName": "IthFromAssembly",
+        "dateCreated": "2025-11-03T02:49:44Z",
+        "readMe": "https://raw.githubusercontent.com/tristan-huber/IthFromAssembly/master/README.md?sanitize=true",
+        "yyyy": 2025,
+        "topMoleculeID": "id-2718",
+        "githubMoleculesUsed": [],
+        "html_url": "https://github.com/tristan-huber/IthFromAssembly",
+        "topics": [
+          "abundance-tool"
+        ],
+        "parentRepo": null,
+        "forks": 0,
+        "dateModified": "739558",
+        "ranking": 0,
+        "searchField": "ithfromassembly tristan-huber get the ith leaf from an assembly abundance-tool",
+        "owner": "tristan-huber",
+        "description": "Get the ith leaf from an assembly",
+        "contentURL": "https://raw.githubusercontent.com/tristan-huber/IthFromAssembly/master/project.abundance?sanitize=true",
+        "svgURL": "https://raw.githubusercontent.com/tristan-huber/IthFromAssembly/master/project.svg?sanitize=true",
+        "isLocal": false
+      },
+      "unitsKey": "Unitless",
+      "fileTypeVersion": 1,
+      "compiledBom": []
     }
   ],
   "allConnectors": [
@@ -12411,6 +12619,12 @@
     },
     {
       "ap1Name": "geometry",
+      "ap2Name": "geometry",
+      "ap1ID": "db4a5fbd-dc98-4db8-97a6-62c986ff290d",
+      "ap2ID": "id-3269"
+    },
+    {
+      "ap1Name": "geometry",
       "ap2Name": "number or geometry",
       "ap1ID": "d09b5559-dde0-4ad8-b220-453773499f12",
       "ap2ID": "62ff65ad-7b00-4338-828f-e7c5abcbfd2a"
@@ -12438,6 +12652,12 @@
       "ap2Name": "Shape 5",
       "ap1ID": "id-1979",
       "ap2ID": "d09b5559-dde0-4ad8-b220-453773499f12"
+    },
+    {
+      "ap1Name": "geometry or number",
+      "ap2Name": "geometry",
+      "ap1ID": "id-1979",
+      "ap2ID": "id-3281"
     },
     {
       "ap1Name": "geometry or number",
