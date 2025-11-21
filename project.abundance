@@ -238,8 +238,8 @@
       "ioValues": [
         {
           "name": "i",
-          "ioValue": 9,
-          "currentEquation": "9"
+          "ioValue": 8,
+          "currentEquation": "8"
         }
       ],
       "topLevel": false,
@@ -258,7 +258,7 @@
           "ioValues": [
             {
               "name": "i",
-              "ioValue": 9
+              "ioValue": 8
             }
           ],
           "codeVersion": 1,
