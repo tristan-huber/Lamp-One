@@ -177,8 +177,7 @@
       "ioValues": [
         {
           "name": "xDist",
-          "ioValue": 0,
-          "currentEquation": "0"
+          "ioValue": 0
         },
         {
           "name": "yDist",
@@ -334,8 +333,7 @@
       "ioValues": [
         {
           "name": "i",
-          "ioValue": 9,
-          "currentEquation": "9"
+          "ioValue": 9
         }
       ],
       "topLevel": false,
