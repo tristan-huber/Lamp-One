@@ -177,8 +177,8 @@
       "ioValues": [
         {
           "name": "xDist",
-          "ioValue": 18,
-          "currentEquation": "18"
+          "ioValue": 0,
+          "currentEquation": "0"
         },
         {
           "name": "yDist",
@@ -239,8 +239,8 @@
       "ioValues": [
         {
           "name": "i",
-          "ioValue": 8,
-          "currentEquation": "8"
+          "ioValue": 9,
+          "currentEquation": "9"
         }
       ],
       "topLevel": false,
@@ -259,7 +259,7 @@
           "ioValues": [
             {
               "name": "i",
-              "ioValue": 8
+              "ioValue": 9
             }
           ],
           "codeVersion": 1,
@@ -335,8 +335,8 @@
       "ioValues": [
         {
           "name": "i",
-          "ioValue": 8,
-          "currentEquation": "8"
+          "ioValue": 9,
+          "currentEquation": "9"
         }
       ],
       "topLevel": false,
@@ -355,7 +355,7 @@
           "ioValues": [
             {
               "name": "i",
-              "ioValue": 8
+              "ioValue": 9
             }
           ],
           "codeVersion": 1,
@@ -824,8 +824,7 @@
       "ioValues": [
         {
           "name": "i",
-          "ioValue": 8,
-          "currentEquation": "8"
+          "ioValue": 8
         }
       ],
       "topLevel": false,
