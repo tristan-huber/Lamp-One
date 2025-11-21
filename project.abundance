@@ -177,8 +177,7 @@
       "ioValues": [
         {
           "name": "xDist",
-          "ioValue": 18,
-          "currentEquation": "18"
+          "ioValue": 18
         },
         {
           "name": "yDist",
@@ -232,15 +231,15 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.5416666666666666,
-      "y": 0.6,
+      "x": 0.5358072916666666,
+      "y": 0.5914285714285714,
       "uniqueID": "id-3302",
       "name": "IthFromAssembly",
       "ioValues": [
         {
           "name": "i",
-          "ioValue": 8,
-          "currentEquation": "8"
+          "ioValue": 9,
+          "currentEquation": "9"
         }
       ],
       "topLevel": false,
@@ -259,7 +258,7 @@
           "ioValues": [
             {
               "name": "i",
-              "ioValue": 8
+              "ioValue": 9
             }
           ],
           "codeVersion": 1,
@@ -335,8 +334,7 @@
       "ioValues": [
         {
           "name": "i",
-          "ioValue": 8,
-          "currentEquation": "8"
+          "ioValue": 8
         }
       ],
       "topLevel": false,
