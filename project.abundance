@@ -171,13 +171,14 @@
     },
     {
       "atomType": "Move",
-      "x": 0.8196614583333333,
-      "y": 0.7827380952380952,
+      "x": 0.779296875,
+      "y": 0.8,
       "uniqueID": "id-4918",
       "ioValues": [
         {
           "name": "xDist",
-          "ioValue": 18
+          "ioValue": 0,
+          "currentEquation": "0"
         },
         {
           "name": "yDist",
@@ -238,8 +239,7 @@
       "ioValues": [
         {
           "name": "i",
-          "ioValue": 9,
-          "currentEquation": "9"
+          "ioValue": 9
         }
       ],
       "topLevel": false,
@@ -327,14 +327,15 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.5384114583333334,
-      "y": 0.7589285714285714,
+      "x": 0.54296875,
+      "y": 0.7342857142857142,
       "uniqueID": "id-3335",
       "name": "IthFromAssembly",
       "ioValues": [
         {
           "name": "i",
-          "ioValue": 8
+          "ioValue": 9,
+          "currentEquation": "9"
         }
       ],
       "topLevel": false,
@@ -353,7 +354,7 @@
           "ioValues": [
             {
               "name": "i",
-              "ioValue": 8
+              "ioValue": 9
             }
           ],
           "codeVersion": 1,
@@ -553,8 +554,8 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.6516927083333334,
-      "y": 0.7529761904761905,
+      "x": 0.6588541666666667,
+      "y": 0.7285714285714285,
       "uniqueID": "id-3411",
       "name": "Linear-Pattern",
       "ioValues": [
