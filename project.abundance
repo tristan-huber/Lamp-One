@@ -14,8 +14,8 @@
   "allAtoms": [
     {
       "atomType": "Output",
-      "x": 0.98,
-      "y": 0.5,
+      "x": 0.9778645833333334,
+      "y": 0.3125,
       "uniqueID": "62ff65ad-7b00-4338-828f-e7c5abcbfd2a"
     },
     {
@@ -32,12 +32,6 @@
       "y": 0.8839285714285715,
       "uniqueID": "876949c1-19f5-4ec4-85e4-723611af38e2",
       "name": "x * (1/sqrt(2))",
-      "ioValues": [
-        {
-          "name": "x",
-          "ioValue": 10
-        }
-      ],
       "currentEquation": "x * (1/sqrt(2))"
     },
     {
@@ -46,16 +40,6 @@
       "y": 0.6828571428571429,
       "uniqueID": "a5cf62d7-a42e-4964-ae4d-f0d18a5483a0",
       "name": "3 * d - 2 * y",
-      "ioValues": [
-        {
-          "name": "d",
-          "ioValue": 10
-        },
-        {
-          "name": "y",
-          "ioValue": 7.071067811865475
-        }
-      ],
       "currentEquation": "3 * d - 2 * y"
     },
     {
@@ -64,12 +48,6 @@
       "y": 0.43142857142857144,
       "uniqueID": "fa845d85-8919-4061-8c50-1c1c3224990b",
       "name": "diam * 3",
-      "ioValues": [
-        {
-          "name": "diam",
-          "ioValue": 10
-        }
-      ],
       "currentEquation": "diam * 3"
     },
     {
@@ -85,10 +63,6 @@
         {
           "name": "yDist",
           "ioValue": 0
-        },
-        {
-          "name": "zDist",
-          "ioValue": 10
         }
       ]
     },
@@ -105,21 +79,37 @@
         {
           "name": "yDist",
           "ioValue": 0
-        },
-        {
-          "name": "zDist",
-          "ioValue": 7.071067811865475
         }
       ]
     },
     {
       "atomType": "ExtractTag",
-      "x": 0.8092447916666667,
-      "y": 0.443452380952381,
+      "x": 0.69921875,
+      "y": 0.40476190476190477,
       "uniqueID": "01b4c584-16c7-4e77-9298-ef6b6d88c11e",
       "name": "Extract Tag",
-      "tag": "toCut",
+      "tag": "hoop_one",
       "tagIndex": 0
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.6516927083333334,
+      "y": 0.18154761904761904,
+      "uniqueID": "id-9376",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 3",
+          "ioValue": null
+        }
+      ]
     },
     {
       "atomType": "GitHubMolecule",
@@ -146,12 +136,6 @@
           "x": 0.5026041666666666,
           "y": 0.6845238095238095,
           "uniqueID": "id-4182",
-          "ioValues": [
-            {
-              "name": "i",
-              "ioValue": 8
-            }
-          ],
           "codeVersion": 1,
           "code": "\n      const Inputs = [\n       {inputName: \"geometry\", type: \"geometry\", defaultValue: null},\n      {inputName: \"i\", type: \"number\", defaultValue: 0},\n      ]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n\n      //Gets the shape from the library - no need to clone or access geometry directly\n      let importedShape = library[geometry]\n      let j = 0;\n      console.log(\"foo\")\n      console.log(importedShape)\n      const leafList = await AssemblyAsIterable(importedShape)\n      console.log(leafList)\n      if (i >= leafList.length) {\n        throw new Error(`Assembly only has ${leafList.length} entries. Tried to find index: ${i}.`)\n      }\n      return leafList[i]\n\n\n      /**\n      Built-in Functions Available:\n      - Move(geometry, x, y, z) - Move a shape in 3D space\n      - Rotate(geometry, x, y, z) - Rotate a shape around X, Y, Z axes (degrees)\n      - Scale(geometry, factor) - Scale a shape by a factor\n      - Assembly([shapes]) - Combine multiple shapes into an assembly\n      - Intersect(shape1, shape2) - Boolean intersection of two shapes\n      - GetBounds(geometry) - Get the bounding box of a shape\n      - Fillet(geometry, radius) - Round edges with specified radius\n      - Chamfer(geometry, size) - Bevel edges with specified size\n\n      To Use the Code Atom, enter your inputs to the input list as an object array:\n      const Inputs = [\n        {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n        {inputName: \"dist\", type: \"number\", defaultValue: 5},\n        {inputName: \"height\", type: \"number\", defaultValue: 10}\n      ]\n\n      Access imported geometry using library[inputName] - the built-in functions handle \n      the complexity of accessing geometry arrays and maintaining metadata automatically.\n\n      Simple Example - Move a shape:\n         const Inputs = [\n          {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n          {inputName: \"x\", type: \"number\", defaultValue: 5}\n        ]\n        let movedShape = await Move(library[shape], x, 0, 0)\n        return movedShape\n      */\n      "
         },
@@ -217,20 +201,526 @@
       "fileTypeVersion": 1
     },
     {
+      "atomType": "Molecule",
+      "x": 0.572265625,
+      "y": 0.5773809523809523,
+      "uniqueID": "id-10081",
+      "name": "Molecule",
+      "ioValues": [
+        {
+          "name": "radius",
+          "ioValue": 10
+        },
+        {
+          "name": "offset",
+          "ioValue": 10
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-10083"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.15384615384615385,
+          "uniqueID": "id-10085",
+          "name": "radius",
+          "type": "number"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.24615384615384617,
+          "uniqueID": "id-10088",
+          "name": "offset",
+          "type": "number"
+        },
+        {
+          "atomType": "Equation",
+          "x": 0.2265625,
+          "y": 0.4494047619047619,
+          "uniqueID": "id-10240",
+          "name": "x * 2",
+          "ioValues": [
+            {
+              "name": "x",
+              "ioValue": 10
+            }
+          ],
+          "currentEquation": "x * 2"
+        },
+        {
+          "atomType": "GitHubMolecule",
+          "x": 0.4921875,
+          "y": 0.24107142857142858,
+          "uniqueID": "id-10156",
+          "name": "RotatePattern",
+          "ioValues": [
+            {
+              "name": "Shape",
+              "ioValue": 10
+            },
+            {
+              "name": "Number",
+              "ioValue": 10
+            },
+            {
+              "name": "Angle",
+              "ioValue": 30
+            }
+          ],
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 0.98,
+              "y": 0.5,
+              "uniqueID": "id-10148"
+            },
+            {
+              "atomType": "Input",
+              "x": 0.025384615384615384,
+              "y": 0.15384615384615385,
+              "uniqueID": "id-10149",
+              "name": "Shape"
+            },
+            {
+              "atomType": "Input",
+              "x": 0.025384615384615384,
+              "y": 0.24615384615384617,
+              "uniqueID": "id-10150",
+              "name": "Number"
+            },
+            {
+              "atomType": "Input",
+              "x": 0.025384615384615384,
+              "y": 0.3384615384615385,
+              "uniqueID": "id-10151",
+              "name": "Angle"
+            },
+            {
+              "atomType": "Circle",
+              "x": 0.19136960600375233,
+              "y": 0.20055710306406688,
+              "uniqueID": "id-10152",
+              "ioValues": [
+                {
+                  "name": "diameter",
+                  "ioValue": 10
+                }
+              ]
+            },
+            {
+              "atomType": "Move",
+              "x": 0.2786116322701689,
+              "y": 0.36490250696378834,
+              "uniqueID": "id-10153",
+              "ioValues": [
+                {
+                  "name": "xDist",
+                  "ioValue": 100
+                },
+                {
+                  "name": "yDist",
+                  "ioValue": 0
+                },
+                {
+                  "name": "zDist",
+                  "ioValue": 0
+                }
+              ]
+            },
+            {
+              "atomType": "Code",
+              "x": 0.5741525423728814,
+              "y": 0.6072423398328691,
+              "uniqueID": "id-10154",
+              "ioValues": [
+                {
+                  "name": "Shape",
+                  "ioValue": 10
+                },
+                {
+                  "name": "Number",
+                  "ioValue": 10
+                },
+                {
+                  "name": "Angle",
+                  "ioValue": 30
+                }
+              ],
+              "codeVersion": 1,
+              "code": "//Inputs:[Shape, Number, Angle];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Rotate(Shape, 0, 0, Angle * i);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
+            },
+            {
+              "atomType": "Extrude",
+              "x": 0.4586864406779661,
+              "y": 0.2618384401114206,
+              "uniqueID": "id-10155",
+              "ioValues": [
+                {
+                  "name": "height",
+                  "ioValue": 10
+                }
+              ]
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "Shape",
+              "ap1ID": "id-10149",
+              "ap2ID": "id-10154"
+            },
+            {
+              "ap2Name": "Number",
+              "ap1ID": "id-10150",
+              "ap2ID": "id-10154"
+            },
+            {
+              "ap2Name": "Angle",
+              "ap1ID": "id-10151",
+              "ap2ID": "id-10154"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-10152",
+              "ap2ID": "id-10153"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-10153",
+              "ap2ID": "id-10155"
+            },
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-10154",
+              "ap2ID": "id-10148"
+            }
+          ],
+          "parentRepo": {
+            "lastFoundGit": "2025-12-05T15:47:14.669Z",
+            "repoName": "RotatePattern",
+            "dateCreated": "2024-10-01T18:14:59Z",
+            "likes": 0,
+            "readMe": "https://raw.githubusercontent.com/BarbourSmith/RotatePattern/master/README.md?sanitize=true",
+            "yyyy": 2024,
+            "topMoleculeID": 1727806499549,
+            "githubMoleculesUsed": [],
+            "html_url": "https://github.com/BarbourSmith/RotatePattern",
+            "topics": [],
+            "parentRepo": null,
+            "forks": 0,
+            "dateModified": "739160",
+            "ranking": 14.1,
+            "searchField": "rotatepattern barboursmith",
+            "owner": "BarbourSmith",
+            "description": "",
+            "contentURL": "https://raw.githubusercontent.com/BarbourSmith/RotatePattern/master/project.abundance?sanitize=true",
+            "svgURL": "https://raw.githubusercontent.com/BarbourSmith/RotatePattern/master/project.svg?sanitize=true",
+            "isLocal": false
+          },
+          "unitsKey": "Inches",
+          "fileTypeVersion": 1
+        },
+        {
+          "atomType": "GitHubMolecule",
+          "x": 0.33658854166666663,
+          "y": 0.6845238095238095,
+          "uniqueID": "id-10199",
+          "name": "SimpleArc",
+          "ioValues": [
+            {
+              "name": "diameter",
+              "ioValue": 20
+            },
+            {
+              "name": "degrees",
+              "ioValue": 10
+            }
+          ],
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 0.98,
+              "y": 0.5,
+              "uniqueID": "id-10187"
+            },
+            {
+              "atomType": "Input",
+              "x": 0.025384615384615384,
+              "y": 0.15384615384615385,
+              "uniqueID": "id-10188",
+              "name": "diameter",
+              "type": "number"
+            },
+            {
+              "atomType": "Input",
+              "x": 0.025384615384615384,
+              "y": 0.24615384615384617,
+              "uniqueID": "id-10189",
+              "name": "degrees",
+              "type": "number"
+            },
+            {
+              "atomType": "Circle",
+              "x": 0.23763020833333337,
+              "y": 0.23511904761904764,
+              "uniqueID": "id-10190",
+              "ioValues": [
+                {
+                  "name": "diameter",
+                  "ioValue": 20
+                }
+              ]
+            },
+            {
+              "atomType": "Rectangle",
+              "x": 0.296875,
+              "y": 0.47619047619047616,
+              "uniqueID": "id-10191",
+              "ioValues": [
+                {
+                  "name": "x length",
+                  "ioValue": 20
+                },
+                {
+                  "name": "y length",
+                  "ioValue": 10
+                }
+              ]
+            },
+            {
+              "atomType": "Equation",
+              "x": 0.294921875,
+              "y": 0.6071428571428572,
+              "uniqueID": "id-10192",
+              "name": "x / 2",
+              "ioValues": [
+                {
+                  "name": "x",
+                  "ioValue": 20
+                }
+              ],
+              "currentEquation": "x / 2"
+            },
+            {
+              "atomType": "Move",
+              "x": 0.423828125,
+              "y": 0.46726190476190477,
+              "uniqueID": "id-10193",
+              "ioValues": [
+                {
+                  "name": "xDist",
+                  "ioValue": 10
+                },
+                {
+                  "name": "yDist",
+                  "ioValue": 0
+                },
+                {
+                  "name": "zDist",
+                  "ioValue": 0
+                }
+              ]
+            },
+            {
+              "atomType": "Move",
+              "x": 0.46289062500000006,
+              "y": 0.7142857142857143,
+              "uniqueID": "id-10194",
+              "ioValues": [
+                {
+                  "name": "xDist",
+                  "ioValue": -10
+                },
+                {
+                  "name": "yDist",
+                  "ioValue": 0
+                },
+                {
+                  "name": "zDist",
+                  "ioValue": 0
+                }
+              ]
+            },
+            {
+              "atomType": "Equation",
+              "x": 0.3678385416666667,
+              "y": 0.7202380952380952,
+              "uniqueID": "id-10195",
+              "name": "-1 * x",
+              "ioValues": [
+                {
+                  "name": "x",
+                  "ioValue": 10
+                }
+              ],
+              "currentEquation": "-1 * x"
+            },
+            {
+              "atomType": "Rotate",
+              "x": 0.5787760416666667,
+              "y": 0.5386904761904762,
+              "uniqueID": "id-10196",
+              "ioValues": [
+                {
+                  "name": "x-axis degrees",
+                  "ioValue": 0
+                },
+                {
+                  "name": "y-axis degrees",
+                  "ioValue": 0
+                },
+                {
+                  "name": "z-axis degrees",
+                  "ioValue": 10
+                }
+              ]
+            },
+            {
+              "atomType": "Difference",
+              "x": 0.7024739583333334,
+              "y": 0.3482142857142857,
+              "uniqueID": "id-10197"
+            },
+            {
+              "atomType": "Difference",
+              "x": 0.7805989583333334,
+              "y": 0.5922619047619048,
+              "uniqueID": "id-10198"
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "diameter",
+              "ap1ID": "id-10188",
+              "ap2ID": "id-10190"
+            },
+            {
+              "ap2Name": "x length",
+              "ap1ID": "id-10188",
+              "ap2ID": "id-10191"
+            },
+            {
+              "ap2Name": "x",
+              "ap1ID": "id-10188",
+              "ap2ID": "id-10192"
+            },
+            {
+              "ap2Name": "z-axis degrees",
+              "ap1ID": "id-10189",
+              "ap2ID": "id-10196"
+            },
+            {
+              "ap2Name": "geometry1",
+              "ap1ID": "id-10190",
+              "ap2ID": "id-10197"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-10191",
+              "ap2ID": "id-10193"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-10191",
+              "ap2ID": "id-10194"
+            },
+            {
+              "ap2Name": "xDist",
+              "ap1ID": "id-10192",
+              "ap2ID": "id-10193"
+            },
+            {
+              "ap2Name": "x",
+              "ap1ID": "id-10192",
+              "ap2ID": "id-10195"
+            },
+            {
+              "ap2Name": "geometry2",
+              "ap1ID": "id-10193",
+              "ap2ID": "id-10197"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-10194",
+              "ap2ID": "id-10196"
+            },
+            {
+              "ap2Name": "xDist",
+              "ap1ID": "id-10195",
+              "ap2ID": "id-10194"
+            },
+            {
+              "ap2Name": "geometry2",
+              "ap1ID": "id-10196",
+              "ap2ID": "id-10198"
+            },
+            {
+              "ap2Name": "geometry1",
+              "ap1ID": "id-10197",
+              "ap2ID": "id-10198"
+            },
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-10198",
+              "ap2ID": "id-10187"
+            }
+          ],
+          "parentRepo": {
+            "privateRepo": false,
+            "repoName": "SimpleArc",
+            "dateCreated": "2025-12-06T04:41:04Z",
+            "readMe": "https://raw.githubusercontent.com/tristan-huber/SimpleArc/master/README.md?sanitize=true",
+            "yyyy": 2025,
+            "topMoleculeID": "id-8035",
+            "githubMoleculesUsed": [],
+            "html_url": "https://github.com/tristan-huber/SimpleArc",
+            "topics": [
+              "abundance-tool"
+            ],
+            "parentRepo": null,
+            "forks": 0,
+            "dateModified": "739591",
+            "ranking": 0,
+            "searchField": "simplearc tristan-huber simple arc shape with outer radius, degrees abundance-tool",
+            "owner": "tristan-huber",
+            "description": "simple arc shape with outer radius, degrees",
+            "contentURL": "https://raw.githubusercontent.com/tristan-huber/SimpleArc/master/project.abundance?sanitize=true",
+            "svgURL": "https://raw.githubusercontent.com/tristan-huber/SimpleArc/master/project.svg?sanitize=true",
+            "isLocal": false
+          },
+          "unitsKey": "Inches",
+          "fileTypeVersion": 1
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "x",
+          "ap1ID": "id-10085",
+          "ap2ID": "id-10240"
+        },
+        {
+          "ap2Name": "diameter",
+          "ap1ID": "id-10240",
+          "ap2ID": "id-10199"
+        }
+      ],
+      "fileTypeVersion": 1
+    },
+    {
       "atomType": "GitHubMolecule",
       "x": 0.3430989583333333,
       "y": 0.1755952380952381,
       "uniqueID": "id-7512",
       "name": "CylinderShade",
       "ioValues": [
-        {
-          "name": "diameter",
-          "ioValue": 10
-        },
-        {
-          "name": "height",
-          "ioValue": 30
-        },
         {
           "name": "materialThickness",
           "ioValue": 0.5
@@ -281,11 +771,6 @@
             {
               "name": "yDist",
               "ioValue": 0
-            },
-            {
-              "name": "zDist",
-              "ioValue": 29.5,
-              "currentEquation": "height"
             }
           ]
         },
@@ -293,27 +778,13 @@
           "atomType": "Circle",
           "x": 0.2649739583333333,
           "y": 0.7371428571428572,
-          "uniqueID": "id-7436",
-          "ioValues": [
-            {
-              "name": "diameter",
-              "ioValue": 10,
-              "currentEquation": "diameter"
-            }
-          ]
+          "uniqueID": "id-7436"
         },
         {
           "atomType": "Circle",
           "x": 0.251953125,
           "y": 0.6,
-          "uniqueID": "id-7437",
-          "ioValues": [
-            {
-              "name": "diameter",
-              "ioValue": 10.05,
-              "currentEquation": "diameter + 0.05"
-            }
-          ]
+          "uniqueID": "id-7437"
         },
         {
           "atomType": "Difference",
@@ -325,14 +796,7 @@
           "atomType": "Extrude",
           "x": 0.4700520833333333,
           "y": 0.4828571428571429,
-          "uniqueID": "id-7439",
-          "ioValues": [
-            {
-              "name": "height",
-              "ioValue": 30,
-              "currentEquation": "height"
-            }
-          ]
+          "uniqueID": "id-7439"
         },
         {
           "atomType": "Color",
@@ -363,12 +827,6 @@
           "y": 0.5285714285714286,
           "uniqueID": "id-7442",
           "name": "x + 0.05",
-          "ioValues": [
-            {
-              "name": "x",
-              "ioValue": 10
-            }
-          ],
           "currentEquation": "x + 0.05"
         },
         {
@@ -403,16 +861,6 @@
           "y": 0.4085714285714286,
           "uniqueID": "id-7445",
           "name": "x - y",
-          "ioValues": [
-            {
-              "name": "x",
-              "ioValue": 30
-            },
-            {
-              "name": "y",
-              "ioValue": 0.5
-            }
-          ],
           "currentEquation": "x - y"
         },
         {
@@ -433,16 +881,8 @@
           "name": "Hoop",
           "ioValues": [
             {
-              "name": "diameter",
-              "ioValue": 10
-            },
-            {
               "name": "thickness",
               "ioValue": 0.375
-            },
-            {
-              "name": "width",
-              "ioValue": 0.5
             }
           ],
           "topLevel": false,
@@ -473,13 +913,7 @@
               "atomType": "Circle",
               "x": 0.27734375,
               "y": 0.27999999999999997,
-              "uniqueID": "id-7450",
-              "ioValues": [
-                {
-                  "name": "diameter",
-                  "ioValue": 10
-                }
-              ]
+              "uniqueID": "id-7450"
             },
             {
               "atomType": "Input",
@@ -493,13 +927,7 @@
               "atomType": "Circle",
               "x": 0.2903645833333333,
               "y": 0.4910714285714286,
-              "uniqueID": "id-7452",
-              "ioValues": [
-                {
-                  "name": "diameter",
-                  "ioValue": 9.625
-                }
-              ]
+              "uniqueID": "id-7452"
             },
             {
               "atomType": "Difference",
@@ -511,13 +939,7 @@
               "atomType": "Extrude",
               "x": 0.5,
               "y": 0.5,
-              "uniqueID": "id-7454",
-              "ioValues": [
-                {
-                  "name": "height",
-                  "ioValue": 0.5
-                }
-              ]
+              "uniqueID": "id-7454"
             },
             {
               "atomType": "Equation",
@@ -525,16 +947,6 @@
               "y": 0.62,
               "uniqueID": "id-7455",
               "name": "x - y",
-              "ioValues": [
-                {
-                  "name": "x",
-                  "ioValue": 10
-                },
-                {
-                  "name": "y",
-                  "ioValue": 0.375
-                }
-              ],
               "currentEquation": "x - y"
             }
           ],
@@ -1790,14 +2202,6 @@
       "name": "CylinderShade",
       "ioValues": [
         {
-          "name": "diameter",
-          "ioValue": 30
-        },
-        {
-          "name": "height",
-          "ioValue": 10
-        },
-        {
           "name": "materialThickness",
           "ioValue": 0.5
         }
@@ -1847,11 +2251,6 @@
             {
               "name": "yDist",
               "ioValue": 0
-            },
-            {
-              "name": "zDist",
-              "ioValue": 9.5,
-              "currentEquation": "height"
             }
           ]
         },
@@ -1859,27 +2258,13 @@
           "atomType": "Circle",
           "x": 0.2649739583333333,
           "y": 0.7371428571428572,
-          "uniqueID": "id-8518",
-          "ioValues": [
-            {
-              "name": "diameter",
-              "ioValue": 30,
-              "currentEquation": "diameter"
-            }
-          ]
+          "uniqueID": "id-8518"
         },
         {
           "atomType": "Circle",
           "x": 0.251953125,
           "y": 0.6,
-          "uniqueID": "id-8519",
-          "ioValues": [
-            {
-              "name": "diameter",
-              "ioValue": 30.05,
-              "currentEquation": "diameter + 0.05"
-            }
-          ]
+          "uniqueID": "id-8519"
         },
         {
           "atomType": "Difference",
@@ -1891,14 +2276,7 @@
           "atomType": "Extrude",
           "x": 0.4700520833333333,
           "y": 0.4828571428571429,
-          "uniqueID": "id-8521",
-          "ioValues": [
-            {
-              "name": "height",
-              "ioValue": 10,
-              "currentEquation": "height"
-            }
-          ]
+          "uniqueID": "id-8521"
         },
         {
           "atomType": "Color",
@@ -1929,12 +2307,6 @@
           "y": 0.5285714285714286,
           "uniqueID": "id-8524",
           "name": "x + 0.05",
-          "ioValues": [
-            {
-              "name": "x",
-              "ioValue": 30
-            }
-          ],
           "currentEquation": "x + 0.05"
         },
         {
@@ -1969,16 +2341,6 @@
           "y": 0.4085714285714286,
           "uniqueID": "id-8527",
           "name": "x - y",
-          "ioValues": [
-            {
-              "name": "x",
-              "ioValue": 10
-            },
-            {
-              "name": "y",
-              "ioValue": 0.5
-            }
-          ],
           "currentEquation": "x - y"
         },
         {
@@ -1999,16 +2361,8 @@
           "name": "Hoop",
           "ioValues": [
             {
-              "name": "diameter",
-              "ioValue": 30
-            },
-            {
               "name": "thickness",
               "ioValue": 0.375
-            },
-            {
-              "name": "width",
-              "ioValue": 0.5
             }
           ],
           "topLevel": false,
@@ -2039,13 +2393,7 @@
               "atomType": "Circle",
               "x": 0.27734375,
               "y": 0.27999999999999997,
-              "uniqueID": "id-8532",
-              "ioValues": [
-                {
-                  "name": "diameter",
-                  "ioValue": 30
-                }
-              ]
+              "uniqueID": "id-8532"
             },
             {
               "atomType": "Input",
@@ -2059,13 +2407,7 @@
               "atomType": "Circle",
               "x": 0.2903645833333333,
               "y": 0.4910714285714286,
-              "uniqueID": "id-8534",
-              "ioValues": [
-                {
-                  "name": "diameter",
-                  "ioValue": 29.625
-                }
-              ]
+              "uniqueID": "id-8534"
             },
             {
               "atomType": "Difference",
@@ -2077,13 +2419,7 @@
               "atomType": "Extrude",
               "x": 0.5,
               "y": 0.5,
-              "uniqueID": "id-8536",
-              "ioValues": [
-                {
-                  "name": "height",
-                  "ioValue": 0.5
-                }
-              ]
+              "uniqueID": "id-8536"
             },
             {
               "atomType": "Equation",
@@ -2091,16 +2427,6 @@
               "y": 0.62,
               "uniqueID": "id-8537",
               "name": "x - y",
-              "ioValues": [
-                {
-                  "name": "x",
-                  "ioValue": 30
-                },
-                {
-                  "name": "y",
-                  "ioValue": 0.375
-                }
-              ],
               "currentEquation": "x - y"
             }
           ],
@@ -3356,14 +3682,6 @@
       "name": "CylinderShade",
       "ioValues": [
         {
-          "name": "diameter",
-          "ioValue": 15.85786437626905
-        },
-        {
-          "name": "height",
-          "ioValue": 15.85786437626905
-        },
-        {
           "name": "materialThickness",
           "ioValue": 0.5
         }
@@ -3413,11 +3731,6 @@
             {
               "name": "yDist",
               "ioValue": 0
-            },
-            {
-              "name": "zDist",
-              "ioValue": 15.35786437626905,
-              "currentEquation": "height"
             }
           ]
         },
@@ -3425,27 +3738,13 @@
           "atomType": "Circle",
           "x": 0.2649739583333333,
           "y": 0.7371428571428572,
-          "uniqueID": "id-9080",
-          "ioValues": [
-            {
-              "name": "diameter",
-              "ioValue": 15.85786437626905,
-              "currentEquation": "diameter"
-            }
-          ]
+          "uniqueID": "id-9080"
         },
         {
           "atomType": "Circle",
           "x": 0.251953125,
           "y": 0.6,
-          "uniqueID": "id-9081",
-          "ioValues": [
-            {
-              "name": "diameter",
-              "ioValue": 15.907864376269051,
-              "currentEquation": "diameter + 0.05"
-            }
-          ]
+          "uniqueID": "id-9081"
         },
         {
           "atomType": "Difference",
@@ -3457,14 +3756,7 @@
           "atomType": "Extrude",
           "x": 0.4700520833333333,
           "y": 0.4828571428571429,
-          "uniqueID": "id-9083",
-          "ioValues": [
-            {
-              "name": "height",
-              "ioValue": 15.85786437626905,
-              "currentEquation": "height"
-            }
-          ]
+          "uniqueID": "id-9083"
         },
         {
           "atomType": "Color",
@@ -3495,12 +3787,6 @@
           "y": 0.5285714285714286,
           "uniqueID": "id-9086",
           "name": "x + 0.05",
-          "ioValues": [
-            {
-              "name": "x",
-              "ioValue": 15.85786437626905
-            }
-          ],
           "currentEquation": "x + 0.05"
         },
         {
@@ -3535,16 +3821,6 @@
           "y": 0.4085714285714286,
           "uniqueID": "id-9089",
           "name": "x - y",
-          "ioValues": [
-            {
-              "name": "x",
-              "ioValue": 15.85786437626905
-            },
-            {
-              "name": "y",
-              "ioValue": 0.5
-            }
-          ],
           "currentEquation": "x - y"
         },
         {
@@ -3565,16 +3841,8 @@
           "name": "Hoop",
           "ioValues": [
             {
-              "name": "diameter",
-              "ioValue": 15.85786437626905
-            },
-            {
               "name": "thickness",
               "ioValue": 0.375
-            },
-            {
-              "name": "width",
-              "ioValue": 0.5
             }
           ],
           "topLevel": false,
@@ -3605,13 +3873,7 @@
               "atomType": "Circle",
               "x": 0.27734375,
               "y": 0.27999999999999997,
-              "uniqueID": "id-9095",
-              "ioValues": [
-                {
-                  "name": "diameter",
-                  "ioValue": 15.85786437626905
-                }
-              ]
+              "uniqueID": "id-9095"
             },
             {
               "atomType": "Input",
@@ -3625,13 +3887,7 @@
               "atomType": "Circle",
               "x": 0.2903645833333333,
               "y": 0.4910714285714286,
-              "uniqueID": "id-9097",
-              "ioValues": [
-                {
-                  "name": "diameter",
-                  "ioValue": 15.48286437626905
-                }
-              ]
+              "uniqueID": "id-9097"
             },
             {
               "atomType": "Difference",
@@ -3643,13 +3899,7 @@
               "atomType": "Extrude",
               "x": 0.5,
               "y": 0.5,
-              "uniqueID": "id-9099",
-              "ioValues": [
-                {
-                  "name": "height",
-                  "ioValue": 0.5
-                }
-              ]
+              "uniqueID": "id-9099"
             },
             {
               "atomType": "Equation",
@@ -3657,16 +3907,6 @@
               "y": 0.62,
               "uniqueID": "id-9100",
               "name": "x - y",
-              "ioValues": [
-                {
-                  "name": "x",
-                  "ioValue": 15.85786437626905
-                },
-                {
-                  "name": "y",
-                  "ioValue": 0.375
-                }
-              ],
               "currentEquation": "x - y"
             }
           ],
@@ -4913,18 +5153,6 @@
       },
       "unitsKey": "Inches",
       "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Assembly",
-      "x": 0.6516927083333334,
-      "y": 0.18154761904761904,
-      "uniqueID": "id-9376",
-      "ioValues": [
-        {
-          "name": "Shape 1",
-          "ioValue": null
-        }
-      ]
     }
   ],
   "allConnectors": [
@@ -4987,6 +5215,26 @@
       "ap2Name": "diameter",
       "ap1ID": "fa845d85-8919-4061-8c50-1c1c3224990b",
       "ap2ID": "id-8594"
+    },
+    {
+      "ap2Name": "Shape 3",
+      "ap1ID": "5e67d293-18e3-45c4-bd26-8d4816cc37c6",
+      "ap2ID": "id-9376"
+    },
+    {
+      "ap2Name": "Shape 2",
+      "ap1ID": "db4a5fbd-dc98-4db8-97a6-62c986ff290d",
+      "ap2ID": "id-9376"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-9376",
+      "ap2ID": "01b4c584-16c7-4e77-9298-ef6b6d88c11e"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-9376",
+      "ap2ID": "62ff65ad-7b00-4338-828f-e7c5abcbfd2a"
     },
     {
       "ap2Name": "Shape 1",
