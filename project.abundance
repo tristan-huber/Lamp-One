@@ -241,7 +241,7 @@
       "x": 0.572265625,
       "y": 0.5773809523809523,
       "uniqueID": "id-10081",
-      "name": "Molecule",
+      "name": "support_struts",
       "ioValues": [
         {
           "name": "radius",
@@ -249,12 +249,12 @@
         },
         {
           "name": "offset",
-          "ioValue": 10
+          "ioValue": 5
         },
         {
           "name": "width",
-          "ioValue": 0.375,
-          "currentEquation": "3/8"
+          "ioValue": 0.75,
+          "currentEquation": "0.75"
         },
         {
           "name": "material_thickness",
@@ -760,7 +760,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 19.625
+              "ioValue": 19.25
             }
           ]
         },
@@ -777,7 +777,7 @@
             },
             {
               "name": "y",
-              "ioValue": 0.375
+              "ioValue": 0.75
             }
           ],
           "currentEquation": "x - y"
@@ -820,7 +820,7 @@
             },
             {
               "name": "yDist",
-              "ioValue": -20
+              "ioValue": -15
             },
             {
               "name": "zDist",
@@ -862,7 +862,7 @@
             },
             {
               "name": "y",
-              "ioValue": 10
+              "ioValue": 5
             }
           ],
           "currentEquation": "-1 * (x + y)"
@@ -5661,6 +5661,20 @@
       },
       "unitsKey": "Inches",
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Equation",
+      "x": 0.513671875,
+      "y": 0.6964285714285714,
+      "uniqueID": "id-11106",
+      "name": "x / 2",
+      "ioValues": [
+        {
+          "name": "x",
+          "ioValue": 10
+        }
+      ],
+      "currentEquation": "x / 2"
     }
   ],
   "allConnectors": [
@@ -5693,6 +5707,16 @@
       "ap2Name": "height",
       "ap1ID": "f1590d52-aa05-4cf7-9e9f-be3ce3027105",
       "ap2ID": "id-8594"
+    },
+    {
+      "ap2Name": "radius",
+      "ap1ID": "f1590d52-aa05-4cf7-9e9f-be3ce3027105",
+      "ap2ID": "id-10081"
+    },
+    {
+      "ap2Name": "x",
+      "ap1ID": "f1590d52-aa05-4cf7-9e9f-be3ce3027105",
+      "ap2ID": "id-11106"
     },
     {
       "ap2Name": "y",
@@ -5758,6 +5782,11 @@
       "ap2Name": "geometry",
       "ap1ID": "id-9074",
       "ap2ID": "db4a5fbd-dc98-4db8-97a6-62c986ff290d"
+    },
+    {
+      "ap2Name": "offset",
+      "ap1ID": "id-11106",
+      "ap2ID": "id-10081"
     }
   ],
   "unitsKey": "Inches",
