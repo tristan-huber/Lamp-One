@@ -114,8 +114,8 @@
     },
     {
       "atomType": "ExtractTag",
-      "x": 0.69921875,
-      "y": 0.40476190476190477,
+      "x": 0.87890625,
+      "y": 0.4702380952380953,
       "uniqueID": "01b4c584-16c7-4e77-9298-ef6b6d88c11e",
       "name": "Extract Tag",
       "tag": "hoop_one",
@@ -123,8 +123,8 @@
     },
     {
       "atomType": "Assembly",
-      "x": 0.6516927083333334,
-      "y": 0.18154761904761904,
+      "x": 0.796875,
+      "y": 0.23214285714285715,
       "uniqueID": "id-9376",
       "ioValues": [
         {
@@ -137,6 +137,10 @@
         },
         {
           "name": "Shape 3",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 5",
           "ioValue": null
         }
       ]
@@ -201,11 +205,12 @@
         },
         {
           "name": "yDist",
-          "ioValue": 0
+          "ioValue": 0,
+          "currentEquation": "0"
         },
         {
           "name": "zDist",
-          "ioValue": 30.25
+          "ioValue": 30.2
         }
       ]
     },
@@ -214,14 +219,14 @@
       "x": 0.6979166666666667,
       "y": 0.9017857142857142,
       "uniqueID": "id-11126",
-      "name": "x + 0.25",
+      "name": "x + 0.2",
       "ioValues": [
         {
           "name": "x",
           "ioValue": 30
         }
       ],
-      "currentEquation": "x + 0.25"
+      "currentEquation": "x + 0.2"
     },
     {
       "atomType": "GitHubMolecule",
@@ -5853,6 +5858,11 @@
       "ap2Name": "geometry",
       "ap1ID": "id-11114",
       "ap2ID": "id-11120"
+    },
+    {
+      "ap2Name": "Shape 5",
+      "ap1ID": "id-11120",
+      "ap2ID": "id-9376"
     },
     {
       "ap2Name": "zDist",
