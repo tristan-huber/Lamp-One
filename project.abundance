@@ -302,22 +302,19 @@
         },
         {
           "atomType": "GitHubMolecule",
-          "x": 0.625,
-          "y": 0.25,
+          "x": 0.7096354166666666,
+          "y": 0.3630952380952381,
           "uniqueID": "id-10156",
           "name": "RotatePattern",
           "ioValues": [
             {
-              "name": "Shape",
-              "ioValue": 10
-            },
-            {
               "name": "Number",
-              "ioValue": 10
+              "ioValue": 3
             },
             {
               "name": "Angle",
-              "ioValue": 30
+              "ioValue": 120,
+              "currentEquation": "120"
             }
           ],
           "topLevel": false,
@@ -388,16 +385,12 @@
               "uniqueID": "id-10154",
               "ioValues": [
                 {
-                  "name": "Shape",
-                  "ioValue": 10
-                },
-                {
                   "name": "Number",
-                  "ioValue": 10
+                  "ioValue": 3
                 },
                 {
                   "name": "Angle",
-                  "ioValue": 30
+                  "ioValue": 120
                 }
               ],
               "codeVersion": 1,
@@ -814,6 +807,46 @@
           "uniqueID": "id-11083",
           "name": "material_thickness",
           "type": "number"
+        },
+        {
+          "atomType": "Move",
+          "x": 0.8665364583333334,
+          "y": 0.7232142857142858,
+          "uniqueID": "id-11086",
+          "ioValues": [
+            {
+              "name": "xDist",
+              "ioValue": 0
+            },
+            {
+              "name": "yDist",
+              "ioValue": 0
+            },
+            {
+              "name": "zDist",
+              "ioValue": 0
+            }
+          ]
+        },
+        {
+          "atomType": "Rotate",
+          "x": 0.7825520833333334,
+          "y": 0.8392857142857143,
+          "uniqueID": "id-11092",
+          "ioValues": [
+            {
+              "name": "x-axis degrees",
+              "ioValue": 0
+            },
+            {
+              "name": "y-axis degrees",
+              "ioValue": 90
+            },
+            {
+              "name": "z-axis degrees",
+              "ioValue": 0
+            }
+          ]
         }
       ],
       "allConnectors": [
@@ -861,6 +894,16 @@
           "ap2Name": "number or geometry",
           "ap1ID": "id-11079",
           "ap2ID": "id-10083"
+        },
+        {
+          "ap2Name": "Shape",
+          "ap1ID": "id-11079",
+          "ap2ID": "id-10156"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-11079",
+          "ap2ID": "id-11092"
         },
         {
           "ap2Name": "height",
