@@ -238,18 +238,18 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.572265625,
-      "y": 0.5773809523809523,
+      "x": 0.62890625,
+      "y": 0.5833333333333334,
       "uniqueID": "id-10081",
       "name": "support_struts",
       "ioValues": [
         {
           "name": "radius",
-          "ioValue": 10
+          "ioValue": 10.375
         },
         {
           "name": "offset",
-          "ioValue": 5
+          "ioValue": 4.625
         },
         {
           "name": "width",
@@ -295,7 +295,7 @@
           "ioValues": [
             {
               "name": "x",
-              "ioValue": 10
+              "ioValue": 10.375
             }
           ],
           "currentEquation": "x * 2"
@@ -475,7 +475,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 20
+              "ioValue": 20.75
             },
             {
               "name": "degrees",
@@ -515,7 +515,7 @@
               "ioValues": [
                 {
                   "name": "diameter",
-                  "ioValue": 20
+                  "ioValue": 20.75
                 }
               ]
             },
@@ -527,11 +527,11 @@
               "ioValues": [
                 {
                   "name": "x length",
-                  "ioValue": 20
+                  "ioValue": 20.75
                 },
                 {
                   "name": "y length",
-                  "ioValue": 20
+                  "ioValue": 20.75
                 }
               ]
             },
@@ -544,7 +544,7 @@
               "ioValues": [
                 {
                   "name": "x",
-                  "ioValue": 20
+                  "ioValue": 20.75
                 }
               ],
               "currentEquation": "x / 2"
@@ -557,7 +557,7 @@
               "ioValues": [
                 {
                   "name": "xDist",
-                  "ioValue": 10
+                  "ioValue": 10.375
                 },
                 {
                   "name": "yDist",
@@ -577,7 +577,7 @@
               "ioValues": [
                 {
                   "name": "xDist",
-                  "ioValue": -10
+                  "ioValue": -10.375
                 },
                 {
                   "name": "yDist",
@@ -598,7 +598,7 @@
               "ioValues": [
                 {
                   "name": "x",
-                  "ioValue": 10
+                  "ioValue": 10.375
                 }
               ],
               "currentEquation": "-1 * x"
@@ -760,7 +760,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 19.25
+              "ioValue": 20
             }
           ]
         },
@@ -773,7 +773,7 @@
           "ioValues": [
             {
               "name": "x",
-              "ioValue": 20
+              "ioValue": 20.75
             },
             {
               "name": "y",
@@ -858,11 +858,11 @@
           "ioValues": [
             {
               "name": "x",
-              "ioValue": 10
+              "ioValue": 10.375
             },
             {
               "name": "y",
-              "ioValue": 5
+              "ioValue": 4.625
             }
           ],
           "currentEquation": "-1 * (x + y)"
@@ -5667,14 +5667,69 @@
       "x": 0.513671875,
       "y": 0.6964285714285714,
       "uniqueID": "id-11106",
-      "name": "x / 2",
+      "name": "x / 2 - 3/8",
       "ioValues": [
         {
           "name": "x",
           "ioValue": 10
         }
       ],
-      "currentEquation": "x / 2"
+      "currentEquation": "x / 2 - 3/8"
+    },
+    {
+      "atomType": "Equation",
+      "x": 0.533203125,
+      "y": 0.5178571428571428,
+      "uniqueID": "id-11110",
+      "name": "x + 3/8",
+      "ioValues": [
+        {
+          "name": "x",
+          "ioValue": 10
+        }
+      ],
+      "currentEquation": "x + 3/8"
+    },
+    {
+      "atomType": "Rotate",
+      "x": 0.71484375,
+      "y": 0.744047619047619,
+      "uniqueID": "id-11114",
+      "ioValues": [
+        {
+          "name": "x-axis degrees",
+          "ioValue": 180,
+          "currentEquation": "180"
+        },
+        {
+          "name": "y-axis degrees",
+          "ioValue": 0
+        },
+        {
+          "name": "z-axis degrees",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.7838541666666667,
+      "y": 0.6607142857142857,
+      "uniqueID": "id-11120",
+      "ioValues": [
+        {
+          "name": "xDist",
+          "ioValue": 0
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 30
+        }
+      ]
     }
   ],
   "allConnectors": [
@@ -5709,14 +5764,14 @@
       "ap2ID": "id-8594"
     },
     {
-      "ap2Name": "radius",
+      "ap2Name": "x",
       "ap1ID": "f1590d52-aa05-4cf7-9e9f-be3ce3027105",
-      "ap2ID": "id-10081"
+      "ap2ID": "id-11106"
     },
     {
       "ap2Name": "x",
       "ap1ID": "f1590d52-aa05-4cf7-9e9f-be3ce3027105",
-      "ap2ID": "id-11106"
+      "ap2ID": "id-11110"
     },
     {
       "ap2Name": "y",
@@ -5749,6 +5804,11 @@
       "ap2ID": "id-8594"
     },
     {
+      "ap2Name": "zDist",
+      "ap1ID": "fa845d85-8919-4061-8c50-1c1c3224990b",
+      "ap2ID": "id-11120"
+    },
+    {
       "ap2Name": "Shape 3",
       "ap1ID": "5e67d293-18e3-45c4-bd26-8d4816cc37c6",
       "ap2ID": "id-9376"
@@ -5769,6 +5829,11 @@
       "ap2ID": "62ff65ad-7b00-4338-828f-e7c5abcbfd2a"
     },
     {
+      "ap2Name": "geometry",
+      "ap1ID": "id-10081",
+      "ap2ID": "id-11114"
+    },
+    {
       "ap2Name": "Shape 1",
       "ap1ID": "id-7512",
       "ap2ID": "id-9376"
@@ -5787,6 +5852,16 @@
       "ap2Name": "offset",
       "ap1ID": "id-11106",
       "ap2ID": "id-10081"
+    },
+    {
+      "ap2Name": "radius",
+      "ap1ID": "id-11110",
+      "ap2ID": "id-10081"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-11114",
+      "ap2ID": "id-11120"
     }
   ],
   "unitsKey": "Inches",
