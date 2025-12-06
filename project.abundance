@@ -150,14 +150,14 @@
       "x": 0.513671875,
       "y": 0.6964285714285714,
       "uniqueID": "id-11106",
-      "name": "x / 2 - 3/8",
+      "name": "x / 2 - 3/16",
       "ioValues": [
         {
           "name": "x",
           "ioValue": 10
         }
       ],
-      "currentEquation": "x / 2 - 3/8"
+      "currentEquation": "x / 2 - 3/16"
     },
     {
       "atomType": "Equation",
@@ -373,7 +373,7 @@
         },
         {
           "name": "offset",
-          "ioValue": 4.625
+          "ioValue": 4.8125
         },
         {
           "name": "width",
@@ -499,7 +499,7 @@
             },
             {
               "name": "yDist",
-              "ioValue": -15
+              "ioValue": -15.1875
             },
             {
               "name": "zDist",
@@ -540,7 +540,7 @@
             },
             {
               "name": "y",
-              "ioValue": 4.625
+              "ioValue": 4.8125
             }
           ],
           "currentEquation": "-1 * (x + y)"
@@ -5781,6 +5781,16 @@
       },
       "unitsKey": "Inches",
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Tag",
+      "x": 0.6477864583333334,
+      "y": 0.7529761904761905,
+      "uniqueID": "id-12800",
+      "name": "toCut",
+      "tags": [
+        "toCut"
+      ]
     }
   ],
   "allConnectors": [
@@ -5917,7 +5927,7 @@
     {
       "ap2Name": "geometry",
       "ap1ID": "id-10081",
-      "ap2ID": "id-11114"
+      "ap2ID": "id-12800"
     },
     {
       "ap2Name": "Shape 2",
@@ -5938,6 +5948,11 @@
       "ap2Name": "geometry",
       "ap1ID": "id-9074",
       "ap2ID": "db4a5fbd-dc98-4db8-97a6-62c986ff290d"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-12800",
+      "ap2ID": "id-11114"
     }
   ],
   "unitsKey": "Inches",
