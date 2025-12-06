@@ -205,7 +205,7 @@
         },
         {
           "name": "zDist",
-          "ioValue": 30.375
+          "ioValue": 30.25
         }
       ]
     },
@@ -214,14 +214,14 @@
       "x": 0.6979166666666667,
       "y": 0.9017857142857142,
       "uniqueID": "id-11126",
-      "name": "x + 3/8",
+      "name": "x + 0.25",
       "ioValues": [
         {
           "name": "x",
           "ioValue": 30
         }
       ],
-      "currentEquation": "x + 3/8"
+      "currentEquation": "x + 0.25"
     },
     {
       "atomType": "GitHubMolecule",
@@ -335,8 +335,8 @@
         },
         {
           "name": "width",
-          "ioValue": 0.75,
-          "currentEquation": "0.75"
+          "ioValue": 0.5,
+          "currentEquation": "0.5"
         },
         {
           "name": "material_thickness",
@@ -398,7 +398,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 19.25
+              "ioValue": 19.75
             }
           ]
         },
@@ -415,7 +415,7 @@
             },
             {
               "name": "y",
-              "ioValue": 0.75
+              "ioValue": 0.5
             }
           ],
           "currentEquation": "x - y * 2"
@@ -696,7 +696,8 @@
             },
             {
               "name": "degrees",
-              "ioValue": 90
+              "ioValue": 90,
+              "currentEquation": "90"
             }
           ],
           "topLevel": false,
